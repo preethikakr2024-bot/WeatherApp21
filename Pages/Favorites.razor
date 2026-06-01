@@ -1,0 +1,311 @@
+﻿@page "/favorites"
+@using BlazorApp21.Services
+@using System.Text.RegularExpressions
+@using System.Net.Http.Json
+@inject AuthService authService
+@inject SupabaseService supabaseService
+@inject ISnackbar Snackbar
+@inject NavigationManager nav
+@inject LocalStorageService localStorage
+@inject HttpClient http
+
+<PageTitle>My Favorites</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-6">
+
+    <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-6" Style="font-weight:700;">
+        ❤️ My Favorites
+    </MudText>
+
+    @if (!isReady)
+    {
+        <MudStack AlignItems="AlignItems.Center" Class="mt-10">
+            <MudProgressCircular Color="Color.Primary" Indeterminate="true" Size="Size.Large" />
+            <MudText Typo="Typo.body1" Color="Color.Secondary" Class="mt-4">
+                Loading favorites...
+            </MudText>
+        </MudStack>
+    }
+    else if (!authService.IsLoggedIn)
+    {
+        <MudPaper Elevation="4" Class="pa-8 text-center" Style="border-radius:20px;">
+            <MudIcon Icon="@Icons.Material.Filled.Lock"
+                     Color="Color.Warning" Style="font-size:4rem;" />
+            <MudText Typo="Typo.h5" Class="mt-4" Style="font-weight:600;">
+                Please Login First
+            </MudText>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                       Href="/login" StartIcon="@Icons.Material.Filled.Login"
+                       Class="mt-6">
+                Sign In
+            </MudButton>
+        </MudPaper>
+    }
+    else
+    {
+        <!-- SAVED FAVORITES DISPLAY -->
+        <MudGrid Class="mb-6">
+            <MudItem xs="12" sm="6">
+                <MudCard Elevation="4"
+                         Style="border-radius:16px; border-left:4px solid #3949ab;">
+                    <MudCardHeader>
+                        <CardHeaderAvatar>
+                            <MudAvatar Color="Color.Primary">
+                                <MudIcon Icon="@Icons.Material.Filled.LocationOn" />
+                            </MudAvatar>
+                        </CardHeaderAvatar>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6" Style="font-weight:600;">
+                                📍 Favorite City
+                            </MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h4" Color="Color.Primary"
+                                 Style="font-weight:700;">
+                            @(string.IsNullOrEmpty(supabaseService.FavoriteCity)
+                                ? "Not Set"
+                                : supabaseService.FavoriteCity.ToUpper())
+                        </MudText>
+                        <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mt-2">
+                            Your saved favorite city
+                        </MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+
+            <MudItem xs="12" sm="6">
+                <MudCard Elevation="4"
+                         Style="border-radius:16px; border-left:4px solid #fb8c00;">
+                    <MudCardHeader>
+                        <CardHeaderAvatar>
+                            <MudAvatar Color="Color.Warning">
+                                <MudIcon Icon="@Icons.Material.Filled.WbSunny" />
+                            </MudAvatar>
+                        </CardHeaderAvatar>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6" Style="font-weight:600;">
+                                🌤️ Favorite Weather
+                            </MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText Typo="Typo.h4" Color="Color.Warning"
+                                 Style="font-weight:700;">
+                            @(string.IsNullOrEmpty(supabaseService.FavoriteWeather)
+                                ? "Not Set"
+                                : supabaseService.FavoriteWeather)
+                        </MudText>
+                        <MudText Typo="Typo.body2" Color="Color.Secondary" Class="mt-2">
+                            Your saved weather condition
+                        </MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+
+        <!-- UPDATE FAVORITES FORM -->
+        <MudPaper Elevation="4" Class="pa-6" Style="border-radius:20px;">
+            <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight:600;">
+                ✏️ Update Favorites
+            </MudText>
+            <MudDivider Class="mb-4" />
+
+            <MudTextField @bind-Value="model.City"
+                          Label="Favorite City"
+                          Variant="Variant.Outlined"
+                          Adornment="Adornment.Start"
+                          AdornmentIcon="@Icons.Material.Filled.LocationCity"
+                          FullWidth="true"
+                          Class="mb-4"
+                          Error="@(!string.IsNullOrEmpty(cityError))"
+                          ErrorText="@cityError"
+                          HelperText="Enter a valid city name (letters only)" />
+
+            <!-- ✅ Weather dropdown instead of free text -->
+            <MudSelect @bind-Value="model.Weather"
+                       Label="Favorite Weather"
+                       Variant="Variant.Outlined"
+                       Adornment="Adornment.Start"
+                       AdornmentIcon="@Icons.Material.Filled.Cloud"
+                       FullWidth="true"
+                       Class="mb-4"
+                       Error="@(!string.IsNullOrEmpty(weatherError))"
+                       ErrorText="@weatherError"
+                       HelperText="Select a valid weather condition">
+                @foreach (var w in validWeathers)
+                {
+                    <MudSelectItem Value="@w">@w</MudSelectItem>
+                }
+            </MudSelect>
+
+            @if (!string.IsNullOrEmpty(message))
+            {
+                <MudAlert Severity="Severity.Success" Class="mb-4">
+                    @message
+                </MudAlert>
+            }
+
+            <MudStack Row="true" Spacing="3">
+                <MudButton Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           StartIcon="@(isSaving ? Icons.Material.Filled.HourglassEmpty : Icons.Material.Filled.Save)"
+                           OnClick="Save"
+                           Disabled="@isSaving"
+                           Style="border-radius:10px;">
+                    @(isSaving ? "Validating city..." : "Save Favorites")
+                </MudButton>
+                <MudButton Variant="Variant.Outlined"
+                           Color="Color.Error"
+                           StartIcon="@Icons.Material.Filled.Delete"
+                           OnClick="Clear"
+                           Style="border-radius:10px;">
+                    Clear
+                </MudButton>
+                <MudButton Variant="Variant.Outlined"
+                           Color="Color.Primary"
+                           StartIcon="@Icons.Material.Filled.Search"
+                           Href="/weather"
+                           Style="border-radius:10px;">
+                    Search Weather
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+    }
+
+</MudContainer>
+
+@code {
+    private FavModel model = new();
+    private string message = "";
+    private bool isReady = false;
+    private bool isSaving = false;
+    private string cityError = "";
+    private string weatherError = "";
+    private const string ApiKey = "0c96d91b611fac9219a7be00818067bb";
+
+    // ✅ Valid weather conditions — dropdown prevents invalid input
+    private readonly List<string> validWeathers = new()
+    {
+        "Rain", "Clouds", "Clear", "Snow",
+        "Thunderstorm", "Drizzle", "Mist", "Fog", "Haze"
+    };
+
+    private bool IsValidText(string input) =>
+        Regex.IsMatch(input.Trim(), @"^[a-zA-Z\s]+$");
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var savedCity = await localStorage.GetItem("favoriteCity");
+            var savedWeather = await localStorage.GetItem("favoriteWeather");
+
+            model.City = !string.IsNullOrEmpty(savedCity)
+                ? savedCity : supabaseService.FavoriteCity;
+            model.Weather = !string.IsNullOrEmpty(savedWeather)
+                ? savedWeather : supabaseService.FavoriteWeather;
+
+            if (!string.IsNullOrEmpty(savedCity))
+                supabaseService.FavoriteCity = savedCity;
+            if (!string.IsNullOrEmpty(savedWeather))
+                supabaseService.FavoriteWeather = savedWeather;
+
+            isReady = true;
+            StateHasChanged();
+        }
+    }
+
+    private async Task Save()
+    {
+        cityError = "";
+        weatherError = "";
+        message = "";
+        StateHasChanged();
+
+        // ✅ Validate city not empty
+        if (string.IsNullOrWhiteSpace(model.City))
+        {
+            cityError = "❌ Please enter a city name!";
+            StateHasChanged();
+            return;
+        }
+
+        // ✅ Validate city letters only
+        if (!IsValidText(model.City))
+        {
+            cityError = "❌ Only letters and spaces allowed!";
+            StateHasChanged();
+            return;
+        }
+
+        // ✅ Validate weather selected
+        if (string.IsNullOrWhiteSpace(model.Weather))
+        {
+            weatherError = "❌ Please select a weather condition!";
+            StateHasChanged();
+            return;
+        }
+
+        // ✅ Verify city exists via API
+        isSaving = true;
+        StateHasChanged();
+
+        try
+        {
+            var url = $"https://api.openweathermap.org/data/2.5/weather?q={model.City.Trim()}&appid={ApiKey}&units=metric";
+            var response = await http.GetAsync(url);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                cityError = $"❌ '{model.City}' is not a valid city! Check spelling.";
+                Snackbar.Add($"City '{model.City}' not found!", Severity.Error);
+                isSaving = false;
+                StateHasChanged();
+                return;
+            }
+        }
+        catch (Exception)
+        {
+            cityError = "❌ Could not verify city. Check your connection.";
+            isSaving = false;
+            StateHasChanged();
+            return;
+        }
+
+        // ✅ Save to memory and LocalStorage
+        supabaseService.FavoriteCity = model.City.Trim();
+        supabaseService.FavoriteWeather = model.Weather.Trim();
+
+        await localStorage.SetItem("favoriteCity", model.City.Trim());
+        await localStorage.SetItem("favoriteWeather", model.Weather.Trim());
+
+        message = "✅ Saved successfully!";
+        Snackbar.Add($"⭐ {model.City} saved as favorite!", Severity.Success);
+        isSaving = false;
+        StateHasChanged();
+    }
+
+    private async Task Clear()
+    {
+        model.City = "";
+        model.Weather = "";
+        cityError = "";
+        weatherError = "";
+        supabaseService.FavoriteCity = "";
+        supabaseService.FavoriteWeather = "";
+
+        await localStorage.RemoveItem("favoriteCity");
+        await localStorage.RemoveItem("favoriteWeather");
+
+        message = "";
+        Snackbar.Add("🗑️ Favorites cleared!", Severity.Info);
+        StateHasChanged();
+    }
+
+    public class FavModel
+    {
+        public string City { get; set; } = "";
+        public string Weather { get; set; } = "";
+    }
+}

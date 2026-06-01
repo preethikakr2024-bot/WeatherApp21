@@ -1,0 +1,50 @@
+﻿@* Desktop horizontal nav buttons *@
+@using BlazorApp21.Services
+@inject SupabaseService supabaseService
+@inject NavigationManager nav
+@inject LocalStorageService localStorage
+
+@if (isLoggedIn)
+{
+    <MudButton Color="Color.Inherit" Href="/weather"
+               StartIcon="@Icons.Material.Filled.Cloud">Weather</MudButton>
+    <MudButton Color="Color.Inherit" Href="/dashboard"
+               StartIcon="@Icons.Material.Filled.Dashboard">Dashboard</MudButton>
+    <MudButton Color="Color.Inherit" OnClick="SignOut"
+               StartIcon="@Icons.Material.Filled.Logout">Sign Out</MudButton>
+}
+else
+{
+    <MudButton Color="Color.Inherit" Href="/signup"
+               StartIcon="@Icons.Material.Filled.PersonAdd">Sign Up</MudButton>
+    <MudButton Color="Color.Inherit" Href="/login"
+               StartIcon="@Icons.Material.Filled.Login">Sign In</MudButton>
+}
+
+@code {
+    bool isLoggedIn = false;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var sessionLogin = await localStorage.GetSessionItem("isLoggedIn");
+            bool sessionValid = sessionLogin == "true";
+
+            await supabaseService.Initialize(); // ← removed the bool argument
+            await Task.Delay(300);
+
+            isLoggedIn = sessionValid && supabaseService.IsLoggedIn();
+            StateHasChanged();
+        }
+    }
+
+    async Task SignOut()
+    {
+        await supabaseService.Logout();
+        await localStorage.ClearSession();
+        isLoggedIn = false;
+        StateHasChanged();
+        nav.NavigateTo("/", forceLoad: true);
+    }
+}

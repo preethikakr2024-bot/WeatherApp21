@@ -1,0 +1,119 @@
+﻿@page "/login"
+@using BlazorApp21.Services
+@inject AuthService authService
+@inject NavigationManager nav
+@inject ISnackbar Snackbar
+@inject LocalStorageService localStorage
+
+<PageTitle>Login</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-10">
+    <MudPaper Elevation="6" Class="pa-8" Style="border-radius:24px;">
+
+        <MudStack AlignItems="AlignItems.Center" Spacing="2" Class="mb-6">
+            <MudAvatar Color="Color.Primary" Style="width:70px; height:70px;">
+                <MudIcon Icon="@Icons.Material.Filled.WbSunny" Style="font-size:2.5rem;" />
+            </MudAvatar>
+            <MudText Typo="Typo.h4" Style="font-weight:700;">Welcome Back</MudText>
+            <MudText Typo="Typo.body2" Color="Color.Secondary">
+                Sign in to access your weather dashboard
+            </MudText>
+        </MudStack>
+
+        <MudDivider Class="mb-6" />
+
+        <MudTextField @bind-Value="email" Label="Email Address" Variant="Variant.Outlined" InputType="InputType.Email"
+                      Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Email" FullWidth="true" Class="mb-4" />
+
+        <MudTextField @bind-Value="password" Label="Password" Variant="Variant.Outlined" InputType="@passwordInputType"
+                      Adornment="Adornment.End" AdornmentIcon="@passwordIcon" OnAdornmentClick="TogglePassword" FullWidth="true"
+                      Class="mb-4" />
+
+        @if (!string.IsNullOrEmpty(message))
+        {
+            <MudAlert Severity="@alertSeverity" Class="mb-4">@message</MudAlert>
+        }
+
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" FullWidth="true" Size="Size.Large" OnClick="LoginUser"
+                   Disabled="@isLoading" Style="border-radius:12px; padding:12px;">
+            @if (isLoading)
+            {
+                <MudProgressCircular Size="Size.Small" Indeterminate="true" Class="mr-2" />
+                <span>Signing in...</span>
+            }
+            else
+            {
+                <MudIcon Icon="@Icons.Material.Filled.Login" Class="mr-2" />
+                <span>SIGN IN</span>
+            }
+        </MudButton>
+
+    </MudPaper>
+</MudContainer>
+
+@code {
+    string email = "";
+    string password = "";
+    string message = "";
+    bool isLoading = false;
+    bool showPassword = false;
+
+    InputType passwordInputType => showPassword ? InputType.Text : InputType.Password;
+    string passwordIcon => showPassword
+        ? Icons.Material.Filled.VisibilityOff
+        : Icons.Material.Filled.Visibility;
+    Severity alertSeverity = Severity.Error;
+
+    void TogglePassword() => showPassword = !showPassword;
+
+    async Task LoginUser()
+    {
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+        {
+            message = "Please enter email and password!";
+            alertSeverity = Severity.Warning;
+            return;
+        }
+
+        isLoading = true;
+        message = "";
+        StateHasChanged();
+
+        try
+        {
+            var success = await authService.Login(email, password);
+            if (success)
+            {
+                // ✅ Login details → sessionStorage (clears when browser closes)
+                await localStorage.SetSessionItem("isLoggedIn", "true");
+                await localStorage.SetSessionItem("userEmail", email);
+                await localStorage.SetSessionItem("loginTime",
+                    DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss"));
+
+                message = "Login successful! Redirecting...";
+                alertSeverity = Severity.Success;
+                Snackbar.Add("Welcome back! You are now signed in!", Severity.Success);
+
+                StateHasChanged();
+                await Task.Delay(500);
+                nav.NavigateTo("/weather", forceLoad: true);
+            }
+            else
+            {
+                message = "Invalid email or password!";
+                alertSeverity = Severity.Error;
+                Snackbar.Add("Invalid email or password!", Severity.Error);
+            }
+        }
+        catch (Exception ex)
+        {
+            message = "Login failed: " + ex.Message;
+            alertSeverity = Severity.Error;
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+}

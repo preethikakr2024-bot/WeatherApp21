@@ -1,0 +1,50 @@
+﻿@* Mobile drawer nav links *@
+@using BlazorApp21.Services
+@inject SupabaseService supabaseService
+@inject NavigationManager nav
+
+@if (isLoggedIn)
+{
+    <MudNavLink Href="/weather"
+                Icon="@Icons.Material.Filled.Cloud"
+                OnClick="OnNavigated">Weather</MudNavLink>
+    <MudNavLink Href="/dashboard"
+                Icon="@Icons.Material.Filled.Dashboard"
+                OnClick="OnNavigated">Dashboard</MudNavLink>
+    <MudNavLink Icon="@Icons.Material.Filled.Logout"
+                OnClick="SignOut">Sign Out</MudNavLink>
+}
+else
+{
+    <MudNavLink Href="/login"
+                Icon="@Icons.Material.Filled.Login"
+                OnClick="OnNavigated">Sign In</MudNavLink>
+    <MudNavLink Href="/signup"
+                Icon="@Icons.Material.Filled.PersonAdd"
+                OnClick="OnNavigated">Sign Up</MudNavLink>
+}
+
+@code {
+    bool isLoggedIn = false;
+
+    [Parameter] public EventCallback OnNavigated { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await supabaseService.Initialize();
+            isLoggedIn = supabaseService.IsLoggedIn();
+            StateHasChanged();
+        }
+    }
+
+    async Task SignOut()
+    {
+        await supabaseService.Logout();
+        isLoggedIn = false;
+        StateHasChanged();
+        await OnNavigated.InvokeAsync();
+        nav.NavigateTo("/", forceLoad: true);
+    }
+}

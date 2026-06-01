@@ -1,0 +1,201 @@
+﻿@inherits LayoutComponentBase
+@using BlazorApp21.Services
+@inject SupabaseService supabaseService
+@inject NavigationManager nav
+@inject ISnackbar Snackbar
+@inject LocalStorageService localStorage
+<MudThemeProvider IsDarkMode="ThemeState.IsDark" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+@if (profileOpen)
+{
+    <div style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:1199;"
+         @onclick="@(() => profileOpen = false)"></div>
+    <div style="
+            position:fixed; top:64px; right:12px; width:280px;
+            background:@(ThemeState.IsDark ? "#2a2a3e" : "white");
+            border-radius:16px; box-shadow:0 8px 40px rgba(0,0,0,0.25);
+            z-index:1200; overflow:hidden;
+            border:1px solid @(ThemeState.IsDark ? "#444466" : "#e0e0e0");">
+        <div style="
+                background:@(ThemeState.IsDark ? "#1e1e2e" : "#f3f0ff");
+                padding:24px 20px 20px; text-align:center;
+                border-bottom:1px solid @(ThemeState.IsDark ? "#444466" : "#e0e0e0");">
+            <MudAvatar Style="background-color:#7c3aed; color:white; font-weight:800;
+                    font-size:1.6rem; width:72px; height:72px; margin:0 auto 12px;">
+                @GetInitial()
+            </MudAvatar>
+            <div style="font-weight:700; font-size:1.05rem; color:@(ThemeState.IsDark ? "#e0e0e0" : "#1a1a1a");">
+                @GetDisplayName()
+            </div>
+            <div style="font-size:0.82rem; opacity:0.6; margin-top:4px; color:@(ThemeState.IsDark ? "#b0b0c0" : "#555");">
+                @userEmail
+            </div>
+        </div>
+        <div style="padding:8px 0;">
+            <div @onclick="SignOut"
+                 style="display:flex; align-items:center; gap:14px;
+                        padding:12px 20px; cursor:pointer; color:#f44336; transition:background 0.15s;"
+                 onmouseover="this.style.background='rgba(244,67,54,0.08)'"
+                 onmouseout="this.style.background='transparent'">
+                <MudIcon Icon="@Icons.Material.Filled.Logout" Style="color:#f44336; font-size:1.2rem;" />
+                <span style="font-size:0.95rem; font-weight:600;">Sign Out</span>
+            </div>
+        </div>
+    </div>
+}
+<MudLayout>
+    <MudAppBar Color="Color.Primary" Elevation="2">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                       Color="Color.Inherit" Edge="Edge.Start"
+                       Class="d-md-none"
+                       OnClick="@(() => drawerOpen = !drawerOpen)" />
+        <MudIcon Icon="@Icons.Material.Filled.WbSunny" Class="mr-2" />
+        <MudText Typo="Typo.h6" Style="font-weight:700;">🌤️ Weather App</MudText>
+        <MudSpacer />
+
+        <MudButton Color="Color.Inherit" Href="/"
+                   StartIcon="@Icons.Material.Filled.Home"
+                   Class="d-none d-md-flex">Home</MudButton>
+        @if (isReady && isLoggedIn)
+        {
+            <MudButton Color="Color.Inherit" Href="/weather"
+                       StartIcon="@Icons.Material.Filled.Cloud"
+                       Class="d-none d-md-flex">Weather</MudButton>
+            <MudButton Color="Color.Inherit" Href="/dashboard"
+                       StartIcon="@Icons.Material.Filled.Dashboard"
+                       Class="d-none d-md-flex">Dashboard</MudButton>
+        }
+        else if (isReady && !isLoggedIn)
+        {
+            <MudButton Color="Color.Inherit" Href="/signup"
+                       StartIcon="@Icons.Material.Filled.PersonAdd"
+                       Class="d-none d-md-flex">Sign Up</MudButton>
+            <MudButton Color="Color.Inherit" Href="/login"
+                       StartIcon="@Icons.Material.Filled.Login"
+                       Class="d-none d-md-flex">Sign In</MudButton>
+        }
+        <MudIconButton Icon="@(ThemeState.IsDark? Icons.Material.Filled.LightMode : Icons.Material.Filled.DarkMode)"
+                       Color="Color.Inherit" OnClick="ToggleTheme" Style="cursor:pointer;" />
+        @if (isReady && isLoggedIn)
+        {
+            <MudAvatar @onclick="@(() => profileOpen = !profileOpen)"
+                       Style="background-color:#7c3aed; color:white; cursor:pointer;
+                               width:36px; height:36px; font-size:1rem; font-weight:700;
+                               margin-left:8px; border:2px solid rgba(255,255,255,0.5);">
+                @GetInitial()
+            </MudAvatar>
+        }
+    </MudAppBar>
+    <MudDrawer @bind-Open="drawerOpen" Variant="DrawerVariant.Temporary"
+               Anchor="Anchor.Left" Elevation="2" Class="d-md-none">
+        <MudDrawerHeader>
+            @if (isReady && isLoggedIn)
+            {
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <MudAvatar Style="background-color:#7c3aed; color:white; font-weight:700;">
+                        @GetInitial()
+                    </MudAvatar>
+                    <div>
+                        <div style="font-weight:700; font-size:0.9rem;">@GetDisplayName()</div>
+                        <div style="font-size:0.75rem; opacity:0.6;">@userEmail</div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <MudText Typo="Typo.h6" Style="font-weight:700;">🌤️ Weather App</MudText>
+            }
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudNavLink Href="/" Icon="@Icons.Material.Filled.Home"
+                        OnClick="@(() => drawerOpen = false)">Home</MudNavLink>
+            @if (isReady && isLoggedIn)
+            {
+                <MudNavLink Href="/weather" Icon="@Icons.Material.Filled.Cloud"
+                            OnClick="@(() => drawerOpen = false)">Weather</MudNavLink>
+                <MudNavLink Href="/dashboard" Icon="@Icons.Material.Filled.Dashboard"
+                            OnClick="@(() => drawerOpen = false)">Dashboard</MudNavLink>
+                <MudDivider Class="my-2" />
+                <MudNavLink Icon="@Icons.Material.Filled.Logout"
+                            OnClick="SignOut" Style="color:#f44336;">Sign Out</MudNavLink>
+            }
+            else if (isReady && !isLoggedIn)
+            {
+                <MudNavLink Href="/signup" Icon="@Icons.Material.Filled.PersonAdd"
+                            OnClick="@(() => drawerOpen = false)">Sign Up</MudNavLink>
+                <MudNavLink Href="/login" Icon="@Icons.Material.Filled.Login"
+                            OnClick="@(() => drawerOpen = false)">Sign In</MudNavLink>
+            }
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent Class="pt-16 pa-4">
+        @Body
+    </MudMainContent>
+</MudLayout>
+@code {
+    bool drawerOpen = false;
+    bool profileOpen = false;
+    bool isLoggedIn = false;
+    bool isReady = false;   // ✅ navbar hides until session is checked
+    string userEmail = "";
+    protected override void OnInitialized()
+    {
+        Snackbar.Configuration.PositionClass = Defaults.Classes.Position.BottomRight;
+        Snackbar.Configuration.VisibleStateDuration = 3000;
+        Snackbar.Configuration.ShowTransitionDuration = 300;
+        Snackbar.Configuration.HideTransitionDuration = 300;
+        Snackbar.Configuration.MaxDisplayedSnackbars = 3;
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var savedTheme = await localStorage.GetItem("isDarkMode");
+            if (savedTheme == "True")
+                ThemeState.IsDark = true;
+            await supabaseService.Initialize();
+            isLoggedIn = supabaseService.IsLoggedIn();
+            if (!isLoggedIn)
+            {
+                await Task.Delay(500);
+                isLoggedIn = supabaseService.IsLoggedIn();
+            }
+            if (isLoggedIn)
+                userEmail = supabaseService.GetUser()?.Email ?? "";
+            isReady = true;  // ✅ now show navbar
+            StateHasChanged();
+        }
+    }
+    string GetInitial()
+    {
+        if (string.IsNullOrEmpty(userEmail)) return "?";
+        return userEmail[0].ToString().ToUpper();
+    }
+    string GetDisplayName()
+    {
+        if (string.IsNullOrEmpty(userEmail)) return "User";
+        var name = userEmail.Split('@')[0];
+        return char.ToUpper(name[0]) + name.Substring(1);
+    }
+    async Task ToggleTheme()
+    {
+        ThemeState.IsDark = !ThemeState.IsDark;
+        await localStorage.SetItem("isDarkMode", ThemeState.IsDark.ToString());
+        StateHasChanged();
+    }
+    async Task SignOut()
+    {
+        profileOpen = false;
+        await supabaseService.Logout();
+        isLoggedIn = false;
+        isReady = false;
+        userEmail = "";
+        drawerOpen = false;
+        Snackbar.Add("👋 You have been signed out successfully!", Severity.Info);
+        StateHasChanged();
+        await Task.Delay(1000);
+        nav.NavigateTo("/", forceLoad: true);
+    }
+}

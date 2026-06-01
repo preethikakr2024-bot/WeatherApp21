@@ -1,0 +1,620 @@
+﻿@page "/weather"
+@inject HttpClient http
+@inject SupabaseService supabaseService
+@inject NavigationManager nav
+@inject ISnackbar Snackbar
+@inject LocalStorageService localStorage
+<PageTitle>Weather Forecast</PageTitle>
+<style>
+    .weather-page-bg {
+        min-height: 100vh;
+        background: linear-gradient(180deg, #87CEEB 0%, #b0e0ff 40%, #e0f4ff 100%);
+        padding: 24px 0;
+    }
+
+    .cloud {
+        position: fixed;
+        background: white;
+        border-radius: 50px;
+        opacity: 0.9;
+        pointer-events: none;
+        z-index: 0;
+        box-shadow: 0 6px 20px rgba(255,255,255,0.4);
+    }
+
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .cloud::before {
+            width: 60%;
+            height: 150%;
+            top: -50%;
+            left: 15%;
+        }
+
+        .cloud::after {
+            width: 40%;
+            height: 120%;
+            top: -35%;
+            right: 15%;
+        }
+
+    .cloud-1 {
+        width: 420px;
+        height: 120px;
+        top: 3%;
+        left: 2%;
+    }
+
+    .cloud-2 {
+        width: 380px;
+        height: 110px;
+        top: 8%;
+        left: 50%;
+    }
+
+    .cloud-3 {
+        width: 500px;
+        height: 140px;
+        top: 18%;
+        left: 20%;
+    }
+
+    .cloud-4 {
+        width: 320px;
+        height: 95px;
+        top: 30%;
+        left: 65%;
+    }
+
+    .cloud-5 {
+        width: 460px;
+        height: 130px;
+        top: 45%;
+        left: 5%;
+    }
+
+    .cloud-6 {
+        width: 400px;
+        height: 115px;
+        top: 58%;
+        left: 40%;
+    }
+
+    .cloud-7 {
+        width: 350px;
+        height: 100px;
+        top: 72%;
+        left: 68%;
+    }
+
+    .cloud-8 {
+        width: 480px;
+        height: 135px;
+        top: 85%;
+        left: 15%;
+    }
+    .weather-page-bg > .mud-container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .forecast-card {
+        border-radius: 20px !important;
+        overflow: hidden;
+        position: relative;
+        min-height: 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: default;
+    }
+
+        .forecast-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.4) !important;
+        }
+
+    .weather-rain {
+        background: linear-gradient(160deg, #1a3a4a 0%, #2c6e8a 50%, #1a3a4a 100%);
+        border-top: 4px solid #4fc3f7 !important;
+    }
+
+    .weather-thunderstorm {
+        background: linear-gradient(160deg, #1a1a2e 0%, #4a0a6b 50%, #1a1a2e 100%);
+        border-top: 4px solid #ce93d8 !important;
+    }
+
+    .weather-snow {
+        background: linear-gradient(160deg, #b0bec5 0%, #eceff1 50%, #b0bec5 100%);
+        border-top: 4px solid #90caf9 !important;
+    }
+
+    .weather-clear {
+        background: linear-gradient(160deg, #f57f17 0%, #ffca28 50%, #ff8f00 100%);
+        border-top: 4px solid #fff176 !important;
+    }
+
+    .weather-clouds {
+        background: linear-gradient(160deg, #546e7a 0%, #78909c 50%, #546e7a 100%);
+        border-top: 4px solid #cfd8dc !important;
+    }
+
+    .weather-mist {
+        background: linear-gradient(160deg, #607d8b 0%, #90a4ae 50%, #607d8b 100%);
+        border-top: 4px solid #e0e0e0 !important;
+    }
+
+    .weather-default {
+        background: linear-gradient(160deg, #1565c0 0%, #1976d2 50%, #1565c0 100%);
+        border-top: 4px solid #82b1ff !important;
+    }
+
+    .rain-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .raindrop {
+        position: absolute;
+        width: 1.5px;
+        background: linear-gradient(to bottom, transparent, rgba(100,200,255,0.6));
+        animation: fall linear infinite;
+        border-radius: 2px;
+    }
+
+    @@keyframes fall {
+        0% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        90% {
+            opacity: 0.6;
+        }
+
+        100% {
+            transform: translateY(220px);
+            opacity: 0;
+        }
+    }
+
+    .snowflake {
+        position: absolute;
+        color: white;
+        font-size: 12px;
+        animation: snowfall linear infinite;
+        opacity: 0.7;
+    }
+
+    @@keyframes snowfall {
+        0% {
+            transform: translateY(-10px) rotate(0deg);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 0.8;
+        }
+
+        100% {
+            transform: translateY(220px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .lightning-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        animation: lightning 4s infinite;
+        pointer-events: none;
+    }
+
+    @@keyframes lightning {
+        0%, 90%, 92%, 94%, 100% {
+            background: transparent;
+        }
+
+        91%, 93% {
+            background: rgba(255,255,255,0.15);
+        }
+    }
+
+    .sun-overlay {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 70%);
+        animation: pulse 2s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @@keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 0.6;
+        }
+
+        50% {
+            transform: scale(1.3);
+            opacity: 1;
+        }
+    }
+
+    .forecast-content {
+        position: relative;
+        z-index: 2;
+        padding: 16px;
+    }
+
+    .weather-emoji {
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+        margin: 8px 0;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .temp-text {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-align: center;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    .weather-label {
+        text-align: center;
+        font-size: 0.85rem;
+        opacity: 0.9;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .date-label {
+        text-align: center;
+        font-size: 0.75rem;
+        opacity: 0.75;
+        margin-bottom: 4px;
+    }
+
+    .humidity-label {
+        text-align: center;
+        font-size: 0.8rem;
+        opacity: 0.85;
+        margin-top: 4px;
+    }
+
+    .search-paper {
+        background: rgba(255,255,255,0.08) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.15) !important;
+        border-radius: 20px !important;
+    }
+</style>
+
+<div class="weather-page-bg">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+    <div class="cloud cloud-5"></div>
+    <div class="cloud cloud-6"></div>
+    <div class="cloud cloud-7"></div>
+    <div class="cloud cloud-8"></div>
+
+    <MudContainer MaxWidth="MaxWidth.Large">
+
+        <MudText Typo="Typo.h4" Align="Align.Center" Class="mb-1"
+                 Style="color:#1a3a5c; font-weight:800; letter-spacing:1px;">
+            🌤️ Weather Forecast
+        </MudText>
+        <MudText Typo="Typo.subtitle1" Align="Align.Center" Class="mb-6" Style="color:#2c5f8a;">
+            Enter a city to get the 5-day weather forecast
+        </MudText>
+
+        <MudPaper Class="pa-4 mb-6 search-paper" Elevation="0">
+            <MudGrid Justify="Justify.Center">
+                <MudItem xs="9">
+                    <MudTextField @bind-Value="city" Label="Enter City Name"
+                                  Variant="Variant.Outlined"
+                                  Placeholder="e.g. London, Bengaluru, Vellore"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.LocationCity"
+                                  FullWidth="true"
+                                  Style="color:#1a3a5c; font-weight:600;" />
+                </MudItem>
+                <MudItem xs="3">
+                    <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                               FullWidth="true" Size="Size.Large"
+                               StartIcon="@Icons.Material.Filled.Search"
+                               OnClick="GetWeather" Style="height:56px; border-radius:12px;">
+                        Search
+                    </MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
+
+        @if (isLoading)
+        {
+            <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="mb-4" />
+            <MudText Align="Align.Center" Style="color:#1a3a5c;">Fetching weather data...</MudText>
+        }
+
+        @if (!string.IsNullOrEmpty(message))
+        {
+            <MudAlert Severity="@alertSeverity" Class="mb-4">@message</MudAlert>
+        }
+
+        @if (forecastList != null && forecastList.Count > 0)
+        {
+            <MudText Typo="Typo.h6" Class="mb-4" Style="color:#1a3a5c; font-weight:600;">
+                📍 5-Day Forecast for <strong>@city.ToUpper()</strong>
+            </MudText>
+            <MudGrid>
+                @foreach (var item in forecastList)
+                {
+                    var cardClass = GetCardClass(item.weather?[0]?.main);
+                    var emoji = GetWeatherEmoji(item.weather?[0]?.main);
+                    var textColor = GetTextColor(item.weather?[0]?.main);
+                    <MudItem xs="12" sm="6" md="4" lg="2">
+                        <div class="forecast-card @cardClass">
+                            @if (item.weather?[0]?.main?.Contains("Rain") == true ||
+                                                item.weather?[0]?.main?.Contains("Drizzle") == true)
+                            {
+                                <div class="rain-overlay">
+                                    @for (int i = 0; i < 12; i++)
+                                    {
+                                        var left = (i * 8 + 2) + "%";
+                                        var height = (20 + i * 5) + "px";
+                                        var delay = (i * 0.2) + "s";
+                                        var duration = (0.6 + i * 0.05) + "s";
+                                        <div class="raindrop"
+                                             style="left:@left; height:@height; animation-delay:@delay; animation-duration:@duration;"></div>
+                                    }
+                                </div>
+                            }
+                            @if (item.weather?[0]?.main?.Contains("Snow") == true)
+                            {
+                                <div class="rain-overlay">
+                                    @for (int i = 0; i < 8; i++)
+                                    {
+                                        var left = (i * 13 + 2) + "%";
+                                        var delay = (i * 0.3) + "s";
+                                        var duration = (1.5 + i * 0.2) + "s";
+                                        <div class="snowflake"
+                                             style="left:@left; animation-delay:@delay; animation-duration:@duration;">
+                                            ❄
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            @if (item.weather?[0]?.main?.Contains("Thunder") == true)
+                            {
+                                <div class="lightning-overlay"></div>
+                            }
+                            @if (item.weather?[0]?.main?.Contains("Clear") == true)
+                            {
+                                <div class="sun-overlay"></div>
+                            }
+                            <div class="forecast-content">
+                                <p class="date-label" style="color:@textColor;">@item.dt_txt</p>
+                                <span class="weather-emoji">@emoji</span>
+                                <p class="temp-text" style="color:@textColor;">@item.main?.temp °C</p>
+                                <p class="weather-label" style="color:@textColor;">@item.weather?[0]?.main</p>
+                                <p class="humidity-label" style="color:@textColor;">💧 @item.main?.humidity%</p>
+                            </div>
+                        </div>
+                    </MudItem>
+                }
+            </MudGrid>
+
+            @if (isLoggedIn)
+            {
+                <MudButton Variant="Variant.Filled" Color="Color.Warning"
+                           StartIcon="@Icons.Material.Filled.Star"
+                           Class="mt-6" Style="border-radius:12px;"
+                           OnClick="SaveFavorite">
+                    ⭐ Save as Favorite
+                </MudButton>
+            }
+            else
+            {
+                <MudAlert Severity="Severity.Info" Class="mt-6">
+                    <a href="/login" style="color:#1565c0; font-weight:600;">Login</a> to save this city as a favorite.
+                </MudAlert>
+            }
+        }
+
+    </MudContainer>
+</div>
+
+@code {
+    string city = "";
+    string message = "";
+    bool isLoading = false;
+    bool isLoggedIn = false;
+    Severity alertSeverity = Severity.Warning;
+    List<ForecastItem>? forecastList;
+
+    string GetCardClass(string? weather) => weather?.ToLower() switch
+    {
+        var w when w?.Contains("rain") == true || w?.Contains("drizzle") == true => "weather-rain",
+        var w when w?.Contains("thunder") == true => "weather-thunderstorm",
+        var w when w?.Contains("snow") == true => "weather-snow",
+        var w when w?.Contains("clear") == true => "weather-clear",
+        var w when w?.Contains("cloud") == true => "weather-clouds",
+        var w when w?.Contains("mist") == true || w?.Contains("fog") == true || w?.Contains("haze") == true => "weather-mist",
+        _ => "weather-default"
+    };
+
+    string GetWeatherEmoji(string? weather) => weather?.ToLower() switch
+    {
+        var w when w?.Contains("thunder") == true => "⛈️",
+        var w when w?.Contains("drizzle") == true => "🌦️",
+        var w when w?.Contains("rain") == true => "🌧️",
+        var w when w?.Contains("snow") == true => "❄️",
+        var w when w?.Contains("clear") == true => "☀️",
+        var w when w?.Contains("cloud") == true => "☁️",
+        var w when w?.Contains("mist") == true || w?.Contains("fog") == true => "🌫️",
+        var w when w?.Contains("haze") == true => "🌁",
+        _ => "🌤️"
+    };
+
+    string GetTextColor(string? weather) => weather?.ToLower() switch
+    {
+        var w when w?.Contains("snow") == true => "#1a237e",
+        var w when w?.Contains("clear") == true => "#3e2000",
+        _ => "white"
+    };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await supabaseService.Initialize();
+            isLoggedIn = supabaseService.IsLoggedIn();
+
+            if (!isLoggedIn)
+            {
+                await Task.Delay(500);
+                isLoggedIn = supabaseService.IsLoggedIn();
+            }
+
+            StateHasChanged();
+        }
+    }
+
+    async Task GetWeather()
+    {
+        if (string.IsNullOrWhiteSpace(city))
+        {
+            message = "Please enter a city name!";
+            alertSeverity = Severity.Warning;
+            return;
+        }
+
+        if (!supabaseService.IsLoggedIn())
+        {
+            message = "Please login to search weather!";
+            alertSeverity = Severity.Warning;
+            StateHasChanged();
+            await Task.Delay(1000);
+            nav.NavigateTo("/login", forceLoad: true);
+            return;
+        }
+
+        isLoading = true;
+        message = "";
+        forecastList = null;
+        StateHasChanged();
+
+        try
+        {
+            var apiKey = "0c96d91b611fac9219a7be00818067bb";
+            var url = $"https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={apiKey}&units=metric";
+            var result = await http.GetFromJsonAsync<ForecastResponse>(url);
+
+            if (result?.list != null)
+            {
+                forecastList = result.list
+                    .GroupBy(f => f.dt_txt?.Substring(0, 10))
+                    .Select(g => g.FirstOrDefault(f => f.dt_txt!.Contains("12:00:00")) ?? g.First())
+                    .Take(5)
+                    .ToList();
+
+                message = "";
+
+                bool hasRain = forecastList.Any(f => f.weather?[0]?.main?.Contains("Rain") == true);
+                bool hasThunder = forecastList.Any(f => f.weather?[0]?.main?.Contains("Thunderstorm") == true);
+                bool hasSnow = forecastList.Any(f => f.weather?[0]?.main?.Contains("Snow") == true);
+                bool hasClear = forecastList.Any(f => f.weather?[0]?.main?.Contains("Clear") == true);
+                bool hasCloud = forecastList.Any(f => f.weather?[0]?.main?.Contains("Cloud") == true);
+                double maxTemp = forecastList.Max(f => f.main?.temp ?? 0);
+                double minTemp = forecastList.Min(f => f.main?.temp ?? 0);
+
+                Snackbar.Add($"📍 Forecast loaded for {city.ToUpper()}!", Severity.Success);
+                if (hasThunder) Snackbar.Add("⛈️ Thunderstorm expected! Stay indoors!", Severity.Error);
+                if (hasRain) Snackbar.Add("🌧️ Rain expected! Carry an umbrella!", Severity.Warning);
+                if (hasSnow) Snackbar.Add("❄️ Snow expected! Stay warm!", Severity.Info);
+                if (hasClear && !hasRain && !hasThunder)
+                    Snackbar.Add("☀️ Clear skies ahead!", Severity.Success);
+                if (hasCloud && !hasRain && !hasThunder)
+                    Snackbar.Add("☁️ Cloudy days ahead! Carry a jacket!", Severity.Normal);
+                if (maxTemp > 35) Snackbar.Add($"🥵 Very hot! Max: {maxTemp}°C. Stay hydrated!", Severity.Warning);
+                if (minTemp < 10) Snackbar.Add($"🥶 Cold days! Min: {minTemp}°C. Wear warm clothes!", Severity.Info);
+            }
+            else
+            {
+                message = "No forecast data found.";
+                alertSeverity = Severity.Warning;
+            }
+        }
+        catch (Exception ex)
+        {
+            message = "Error: " + ex.Message;
+            alertSeverity = Severity.Error;
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    async Task SaveFavorite()
+    {
+        if (string.IsNullOrWhiteSpace(city) || forecastList == null)
+        {
+            message = "Please search for a city first!";
+            alertSeverity = Severity.Warning;
+            return;
+        }
+
+        var condition = forecastList.FirstOrDefault()?.weather?[0]?.main ?? "Unknown";
+        supabaseService.FavoriteCity = city;
+        supabaseService.FavoriteWeather = condition;
+
+        await localStorage.SetItem("favoriteCity", city);
+        await localStorage.SetItem("favoriteWeather", condition);
+
+        Snackbar.Add($"⭐ {city} saved as favorite!", Severity.Success);
+        message = $"⭐ {city} saved as favorite!";
+        alertSeverity = Severity.Success;
+        StateHasChanged();
+
+        await Task.Delay(1000);
+        nav.NavigateTo("/dashboard", forceLoad: true);
+    }
+
+    public class ForecastResponse { public List<ForecastItem>? list { get; set; } }
+    public class ForecastItem
+    {
+        public Main? main { get; set; }
+        public WeatherInfo[]? weather { get; set; }
+        public string? dt_txt { get; set; }
+    }
+    public class Main
+    {
+        public double? temp { get; set; }
+        public int? humidity { get; set; }
+    }
+    public class WeatherInfo { public string? main { get; set; } }
+}

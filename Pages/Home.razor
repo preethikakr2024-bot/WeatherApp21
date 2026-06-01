@@ -1,0 +1,75 @@
+﻿@page "/"
+<PageTitle>Weather App</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Large" Class="mt-6">
+
+    <!-- HERO -->
+    <MudPaper Elevation="6" Class="pa-8 mb-6"
+              Style="border-radius:24px; background:linear-gradient(135deg,#1a237e,#3949ab);">
+        <MudStack AlignItems="AlignItems.Center" Spacing="4">
+            <MudText Typo="Typo.h3" Style="color:white; font-weight:700;">
+                🌤️ Weather App
+            </MudText>
+            <MudText Typo="Typo.h6" Style="color:rgba(255,255,255,0.8);">
+                Real-time weather updates and 5-day forecasts instantly
+            </MudText>
+
+            <MudGrid Justify="Justify.Center" Style="width:100%;">
+
+                <!-- Check Weather Card -->
+                <MudItem xs="12" sm="6">
+                    <MudPaper Elevation="0" Class="pa-6"
+                              Style="border-radius:16px; background:rgba(255,255,255,0.15); height:100%; text-align:center;">
+                        <MudStack AlignItems="AlignItems.Center" Spacing="2">
+                            <MudAvatar Color="Color.Primary" Size="Size.Large">
+                                <MudIcon Icon="@Icons.Material.Filled.Cloud" />
+                            </MudAvatar>
+                            <MudText Typo="Typo.h6" Style="color:white; font-weight:600;">
+                                🔍 Check Weather
+                            </MudText>
+                            <MudText Typo="Typo.body2"
+                                     Style="color:rgba(255,255,255,0.8); text-align:center;">
+                                Get real-time weather and 5-day forecasts for any city instantly
+                            </MudText>
+                            <MudButton Variant="Variant.Filled"
+                                       Size="Size.Large"
+                                       Href="/weather"
+                                       FullWidth="true"
+                                       Style="background:white; color:#3949ab; font-weight:600; border-radius:12px;">
+                                🔍 Check Weather
+                            </MudButton>
+                        </MudStack>
+                    </MudPaper>
+                </MudItem>
+
+                <!-- Favorites Card -->
+                <MudItem xs="12" sm="6">
+                    <MudPaper Elevation="0" Class="pa-6"
+                              Style="border-radius:16px; background:rgba(255,255,255,0.15); height:100%; text-align:center;">
+                        <MudStack AlignItems="AlignItems.Center" Spacing="2">
+                            <MudAvatar Color="Color.Error" Size="Size.Large">
+                                <MudIcon Icon="@Icons.Material.Filled.Favorite" />
+                            </MudAvatar>
+                            <MudText Typo="Typo.h6" Style="color:white; font-weight:600;">
+                                ❤️ Favorites
+                            </MudText>
+                            <MudText Typo="Typo.body2"
+                                     Style="color:rgba(255,255,255,0.8); text-align:center;">
+                                Save your favorite cities for quick weather access anytime
+                            </MudText>
+                            <!-- ✅ FIXED: /login changed to /dashboard -->
+                            <MudButton Variant="Variant.Filled"
+                                       Size="Size.Large"
+                                       Href="/dashboard"
+                                       FullWidth="true"
+                                       Style="background:white; color:#e53935; font-weight:600; border-radius:12px;">
+                                ❤️ My Cities
+                            </MudButton>
+                        </MudStack>
+                    </MudPaper>
+                </MudItem>
+
+            </MudGrid>
+        </MudStack>
+    </MudPaper>
+</MudContainer>
