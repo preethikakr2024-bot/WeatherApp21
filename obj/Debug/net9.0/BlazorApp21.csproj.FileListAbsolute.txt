@@ -1181,3 +1181,4 @@ D:\Web dev\BlazorApp21\bin\Debug\net9.0\wwwroot\_framework\BlazorApp21.8rzot5bep
 D:\Web dev\BlazorApp21\obj\Debug\net9.0\compressed\m3wdczo78p-rw3bs4d60u.gz
 D:\Web dev\BlazorApp21\obj\Debug\net9.0\compressed\190ffvfi3g-8rzot5bep8.gz
 D:\Web dev\BlazorApp21\obj\Debug\net9.0\compressed\o2janug9up-250jwyx1sw.gz
+D:\Web dev\BlazorApp21\obj\Debug\net9.0\BlazorApp21.sourcelink.json

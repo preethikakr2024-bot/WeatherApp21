@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj": {}
+    "D:\\Web dev\\BlazorApp21\\BlazorApp21.Api\\BlazorApp21.Api.csproj": {}
   },
   "projects": {
-    "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj": {
+    "D:\\Web dev\\BlazorApp21\\BlazorApp21.Api\\BlazorApp21.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+        "projectUniqueName": "D:\\Web dev\\BlazorApp21\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
         "projectName": "BlazorApp21.Api",
-        "projectPath": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+        "projectPath": "D:\\Web dev\\BlazorApp21\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\Web dev\\BlazorApp21.Api\\obj\\",
+        "outputPath": "D:\\Web dev\\BlazorApp21\\BlazorApp21.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -60,7 +60,7 @@
             },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[3.8.1, )"
+              "version": "[3.9.0, )"
             },
             "MudBlazor": {
               "target": "Package",
