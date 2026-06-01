@@ -118,7 +118,6 @@ namespace BlazorApp21.Services
             FavoriteWeather = string.Empty;
         }
 
-        // ✅ Fixed: Delete then Insert instead of Update (avoids Where filter mismatch)
         public async Task<string> SaveFavoriteToDb(string city, string weather)
         {
             await Initialize();
@@ -129,11 +128,19 @@ namespace BlazorApp21.Services
 
             try
             {
-                // ✅ Delete old row first
-                await _client!
+                // ✅ Fetch all existing rows for this user and delete each by ID
+                var existing = await _client!
                     .From<UserFavorite>()
                     .Where(x => x.UserId == userId)
-                    .Delete();
+                    .Get();
+
+                foreach (var row in existing.Models)
+                {
+                    await _client!
+                        .From<UserFavorite>()
+                        .Where(x => x.Id == row.Id)
+                        .Delete();
+                }
 
                 // ✅ Insert fresh row
                 var favorite = new UserFavorite
@@ -158,7 +165,6 @@ namespace BlazorApp21.Services
             }
         }
 
-        // ✅ Fixed: Also updates in-memory on load
         public async Task<UserFavorite?> LoadFavoriteFromDb()
         {
             await Initialize();
@@ -172,7 +178,8 @@ namespace BlazorApp21.Services
                     .Where(x => x.UserId == userId)
                     .Get();
 
-                var favorite = result.Models.FirstOrDefault();
+                // ✅ Always pick the latest row to avoid stale data
+                var favorite = result.Models.OrderByDescending(x => x.CreatedAt).FirstOrDefault();
 
                 if (favorite != null)
                 {
@@ -197,10 +204,19 @@ namespace BlazorApp21.Services
 
             try
             {
-                await _client!
+                // ✅ Fetch and delete each row by ID
+                var existing = await _client!
                     .From<UserFavorite>()
                     .Where(x => x.UserId == userId)
-                    .Delete();
+                    .Get();
+
+                foreach (var row in existing.Models)
+                {
+                    await _client!
+                        .From<UserFavorite>()
+                        .Where(x => x.Id == row.Id)
+                        .Delete();
+                }
 
                 FavoriteCity = string.Empty;
                 FavoriteWeather = string.Empty;

@@ -168,7 +168,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 132,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -181,19 +181,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Dockerfile",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-01T06:04:59.117Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -210,13 +197,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Dockerfile",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-01T06:04:59.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "nginx.conf",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\nginx.conf",
               "RelativeDocumentMoniker": "nginx.conf",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\nginx.conf",
-              "RelativeToolTip": "nginx.conf",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\nginx.conf*",
+              "RelativeToolTip": "nginx.conf*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-06-01T06:03:36.577Z",
               "EditorCaption": ""
@@ -722,10 +722,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2026-05-26T10:33:39.678Z",
               "EditorCaption": " -  [English (United States)] - PNG [192x192, 8 bit, PNG]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
