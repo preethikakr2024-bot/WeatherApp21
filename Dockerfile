@@ -5,7 +5,7 @@ COPY BlazorApp21.csproj .
 RUN dotnet restore
 
 COPY . .
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish BlazorApp21.csproj -c Release -o /app/publish
 
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
