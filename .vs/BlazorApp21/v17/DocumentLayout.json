@@ -3,6 +3,13 @@
   "WorkspaceRootPath": "D:\\Web dev\\BlazorApp21\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\favoriteapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\favoriteapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,10 +74,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\layout\\navbuttons.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -154,7 +157,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 132,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -170,7 +173,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\appsettings.json",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-03T07:36:33.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
+              "RelativeDocumentMoniker": "wwwroot\\appsettings.json",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
+              "RelativeToolTip": "wwwroot\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-27T05:37:05.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FavoriteApiService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\FavoriteApiService.cs",
               "RelativeDocumentMoniker": "Services\\FavoriteApiService.cs",
@@ -183,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dashboard.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Dashboard.razor",
               "RelativeDocumentMoniker": "Pages\\Dashboard.razor",
@@ -191,12 +220,11 @@
               "RelativeToolTip": "Pages\\Dashboard.razor",
               "ViewState": "AgIAAJwAAABQ//+n9iUTwKEAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:47:24.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:47:24.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Favorites.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Favorites.razor",
               "RelativeDocumentMoniker": "Pages\\Favorites.razor",
@@ -204,16 +232,11 @@
               "RelativeToolTip": "Pages\\Favorites.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:49:21.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+              "WhenOpened": "2026-05-26T10:49:21.506Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Weather.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Weather.razor",
               "RelativeDocumentMoniker": "Pages\\Weather.razor",
@@ -221,12 +244,11 @@
               "RelativeToolTip": "Pages\\Weather.razor",
               "ViewState": "AgIAAFACAAAAAAAAAAAwwGwCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:46:53.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:46:53.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Program.cs",
               "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Program.cs",
@@ -234,12 +256,11 @@
               "RelativeToolTip": "..\\BlazorApp21.Api\\Program.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAwwCEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:00:55.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T11:00:55.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "BlazorApp21.csproj",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\BlazorApp21.csproj",
               "RelativeDocumentMoniker": "BlazorApp21.csproj",
@@ -247,12 +268,11 @@
               "RelativeToolTip": "BlazorApp21.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-26T10:16:20.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:16:20.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "nginx.conf",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\nginx.conf",
               "RelativeDocumentMoniker": "nginx.conf",
@@ -264,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SupabaseService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseService.cs",
               "RelativeDocumentMoniker": "Services\\SupabaseService.cs",
@@ -276,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "LocalStorageService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\LocalStorageService.cs",
               "RelativeDocumentMoniker": "Services\\LocalStorageService.cs",
@@ -288,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -300,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
               "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Dockerfile",
@@ -312,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -324,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "_Imports.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\_Imports.razor",
               "RelativeDocumentMoniker": "_Imports.razor",
@@ -336,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "WeatherService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\WeatherService.cs",
               "RelativeDocumentMoniker": "Services\\WeatherService.cs",
@@ -348,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
@@ -360,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ThemeState.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\ThemeState.cs",
               "RelativeDocumentMoniker": "Services\\ThemeState.cs",
@@ -372,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "SupabaseSessionHandler.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseSessionHandler.cs",
               "RelativeDocumentMoniker": "Services\\SupabaseSessionHandler.cs",
@@ -384,19 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
-              "RelativeDocumentMoniker": "wwwroot\\appsettings.json",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
-              "RelativeToolTip": "wwwroot\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-27T05:37:05.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "NavButtons.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavButtons.razor",
               "RelativeDocumentMoniker": "Layout\\NavButtons.razor",
@@ -408,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MainLayout.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\MainLayout.razor",
               "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
@@ -420,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "NavDrawerButtons.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavDrawerButtons.razor",
               "RelativeDocumentMoniker": "Layout\\NavDrawerButtons.razor",
@@ -432,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
@@ -444,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Routes.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\Routes.razor",
               "RelativeDocumentMoniker": "Components\\Routes.razor",
@@ -456,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "App.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\App.razor",
               "RelativeDocumentMoniker": "Components\\App.razor",
@@ -468,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "WeatherResponse.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\WeatherResponse.cs",
               "RelativeDocumentMoniker": "Models\\WeatherResponse.cs",
@@ -480,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "UserModel.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\UserModel.cs",
               "RelativeDocumentMoniker": "Models\\UserModel.cs",
@@ -492,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -504,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\LoginModel.cs",
               "RelativeDocumentMoniker": "Models\\LoginModel.cs",
@@ -516,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ForecastResponse.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\ForecastResponse.cs",
               "RelativeDocumentMoniker": "Models\\ForecastResponse.cs",
@@ -528,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Signup.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Signup.razor",
               "RelativeDocumentMoniker": "Pages\\Signup.razor",
@@ -540,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Program (1).cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Downloads\\Program (1).cs",
               "ToolTip": "C:\\Users\\Dell\\Downloads\\Program (1).cs",
@@ -550,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "SupabaseService (3).cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Downloads\\SupabaseService (3).cs",
               "ToolTip": "C:\\Users\\Dell\\Downloads\\SupabaseService (3).cs",
@@ -560,7 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -572,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Login.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Pages\\Login.razor",
@@ -584,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Pages\\Home.razor",
@@ -596,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
@@ -608,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "icon-192.png -  [English (United States)] - PNG [192x192, 8 bit, PNG]",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\icon-192.png",
               "RelativeDocumentMoniker": "wwwroot\\icon-192.png",
@@ -617,6 +625,10 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2026-05-26T10:33:39.678Z",
               "EditorCaption": " -  [English (United States)] - PNG [192x192, 8 bit, PNG]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
               "$type": "Bookmark",
