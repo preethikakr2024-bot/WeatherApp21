@@ -11,16 +11,21 @@ namespace BlazorApp21.Api.Services
             _favorites = database.GetCollection<UserFavorite>("Favorites");
         }
         public async Task SaveFavorite(UserFavorite fav)
-        {
-            var existing = await _favorites
-                .Find(f => f.UserId == fav.UserId)
-                .FirstOrDefaultAsync();
+{
+    var existing = await _favorites
+        .Find(f => f.UserId == fav.UserId)
+        .FirstOrDefaultAsync();
 
-            if (existing == null)
-                await _favorites.InsertOneAsync(fav);
-            else
-                await _favorites.ReplaceOneAsync(f => f.UserId == fav.UserId, fav);
-        }
+    if (existing == null)
+    {
+        await _favorites.InsertOneAsync(fav);
+    }
+    else
+    {
+        fav.Id = existing.Id; // ✅ preserve the existing MongoDB _id
+        await _favorites.ReplaceOneAsync(f => f.UserId == fav.UserId, fav);
+    }
+}
         public async Task<UserFavorite?> GetFavorite(string userId)
         {
             return await _favorites
