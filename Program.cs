@@ -15,9 +15,9 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 
 builder.Services.AddMudServices();
-
 builder.Services.AddScoped<LocalStorageService>();
 builder.Services.AddScoped<SupabaseService>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<FavoriteApiService>();
 
 await builder.Build().RunAsync();

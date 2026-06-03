@@ -3,30 +3,12 @@
   "WorkspaceRootPath": "D:\\Web dev\\BlazorApp21\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\blazorapp21.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\blazorapp21.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:blazorapp21.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:nginx.conf||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\supabaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +19,71 @@
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\localstorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\controllers\\favoritecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\blazorapp21.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\services\\mongoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\models\\userfavorite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\controllers\\favoritecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\themestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\themestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:pages\\dashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\favoriteapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\favoriteapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\blazorapp21.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\layout\\navbuttons.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -99,21 +138,6 @@
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:models\\forecastresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\services\\mongoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\supabasesessionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -126,23 +150,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{792507B1-EF3D-4ADE-AC40-C8C1C1E313D5}|..\\BlazorApp21.Api\\BlazorApp21.Api.csproj|d:\\web dev\\blazorapp21.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\services\\themestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|solutionrelative:services\\themestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3BB5FEBF-97E7-4713-A56F-5A06FCFFA807}|BlazorApp21.csproj|d:\\web dev\\blazorapp21\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -168,7 +175,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 132,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -184,38 +191,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BlazorApp21.Api.csproj",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-26T10:57:35.443Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "SupabaseService.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseService.cs",
+              "RelativeDocumentMoniker": "Services\\SupabaseService.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseService.cs",
+              "RelativeToolTip": "Services\\SupabaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:16:57.944Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Dockerfile",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-01T06:04:59.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "nginx.conf",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\nginx.conf",
               "RelativeDocumentMoniker": "nginx.conf",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\nginx.conf*",
-              "RelativeToolTip": "nginx.conf*",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\nginx.conf",
+              "RelativeToolTip": "nginx.conf",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-06-01T06:03:36.577Z",
@@ -223,293 +216,153 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Dockerfile",
-              "RelativeDocumentMoniker": "Dockerfile",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Dockerfile",
-              "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-01T06:01:04.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "BlazorApp21.csproj",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\BlazorApp21.csproj",
               "RelativeDocumentMoniker": "BlazorApp21.csproj",
               "ToolTip": "D:\\Web dev\\BlazorApp21\\BlazorApp21.csproj",
               "RelativeToolTip": "BlazorApp21.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-05-26T10:16:20.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:14:42.47Z",
+              "DocumentIndex": 4,
+              "Title": "BlazorApp21.Api.csproj",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-26T10:57:35.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Dashboard.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Dashboard.razor",
-              "RelativeDocumentMoniker": "Pages\\Dashboard.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Dashboard.razor",
-              "RelativeToolTip": "Pages\\Dashboard.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAIBJwDcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:47:24.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SupabaseService.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseService.cs",
-              "RelativeDocumentMoniker": "Services\\SupabaseService.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseService.cs",
-              "RelativeToolTip": "Services\\SupabaseService.cs",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAswNgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:16:57.944Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "LocalStorageService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\LocalStorageService.cs",
               "RelativeDocumentMoniker": "Services\\LocalStorageService.cs",
               "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\LocalStorageService.cs",
               "RelativeToolTip": "Services\\LocalStorageService.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwB8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAA1wB0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:17:47.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:17:47.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-01T06:01:04.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Dockerfile",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Dockerfile",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-01T06:04:59.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\WeatherForecast.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\WeatherForecast.cs",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\WeatherForecast.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T11:01:13.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Program.cs",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Program.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Program.cs",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T11:00:55.465Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "FavoriteController.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:58:26.997Z",
-              "EditorCaption": ""
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\appsettings.json",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-26T11:00:43.816Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "MongoService.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Services\\MongoService.cs",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Services\\MongoService.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Services\\MongoService.cs",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\Services\\MongoService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T11:00:16.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UserFavorite.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Models\\UserFavorite.cs",
               "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Models\\UserFavorite.cs",
               "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Models\\UserFavorite.cs",
               "RelativeToolTip": "..\\BlazorApp21.Api\\Models\\UserFavorite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA4wA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:59:27.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WeatherService.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\WeatherService.cs",
-              "RelativeDocumentMoniker": "Services\\WeatherService.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\WeatherService.cs",
-              "RelativeToolTip": "Services\\WeatherService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:53:16.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:59:27.883Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "NavButtons.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavButtons.razor",
-              "RelativeDocumentMoniker": "Layout\\NavButtons.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavButtons.razor",
-              "RelativeToolTip": "Layout\\NavButtons.razor",
-              "ViewState": "AgIAABsAAAAAAAAAAIBJwDEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:39:19.653Z",
-              "EditorCaption": ""
+              "Title": "FavoriteController.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\Controllers\\FavoriteController.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:58:26.997Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "Layout\\MainLayout.razor",
-              "ViewState": "AgIAAJYAAAAAAAAAAIBJwMgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:16:02.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Weather.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Weather.razor",
-              "RelativeDocumentMoniker": "Pages\\Weather.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Weather.razor",
-              "RelativeToolTip": "Pages\\Weather.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:46:53.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Favorites.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Favorites.razor",
-              "RelativeDocumentMoniker": "Pages\\Favorites.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Favorites.razor",
-              "RelativeToolTip": "Pages\\Favorites.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:49:21.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "NavDrawerButtons.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavDrawerButtons.razor",
-              "RelativeDocumentMoniker": "Layout\\NavDrawerButtons.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavDrawerButtons.razor",
-              "RelativeToolTip": "Layout\\NavDrawerButtons.razor",
-              "ViewState": "AgIAAAEAAAAAAAAAAIBJwAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:40:27.547Z",
-              "EditorCaption": ""
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwBYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:14:42.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Layout\\NavMenu.razor",
-              "ViewState": "AgIAADYAAAAAAAAAAIBJwCUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:40:47.243Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "Components\\Routes.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Components\\Routes.razor",
-              "RelativeToolTip": "Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:38:09.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "App.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\App.razor",
-              "RelativeDocumentMoniker": "Components\\App.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Components\\App.razor",
-              "RelativeToolTip": "Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:15:29.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WeatherResponse.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\WeatherResponse.cs",
-              "RelativeDocumentMoniker": "Models\\WeatherResponse.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\WeatherResponse.cs",
-              "RelativeToolTip": "Models\\WeatherResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:45:46.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\UserModel.cs",
-              "RelativeDocumentMoniker": "Models\\UserModel.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\UserModel.cs",
-              "RelativeToolTip": "Models\\UserModel.cs",
-              "ViewState": "AgIAAAAAAAAAOI7jKLTnvwMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:44:22.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:43:14.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\LoginModel.cs",
-              "RelativeToolTip": "Models\\LoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:42:45.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ForecastResponse.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\ForecastResponse.cs",
-              "RelativeDocumentMoniker": "Models\\ForecastResponse.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\ForecastResponse.cs",
-              "RelativeToolTip": "Models\\ForecastResponse.cs",
-              "ViewState": "AgIAAAAAAAAAjuM4DrTnvwUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:42:07.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
               "Title": "_Imports.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\_Imports.razor",
               "RelativeDocumentMoniker": "_Imports.razor",
@@ -517,51 +370,263 @@
               "RelativeToolTip": "_Imports.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:15:46.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:15:46.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MongoService.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Services\\MongoService.cs",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Services\\MongoService.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Services\\MongoService.cs",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\Services\\MongoService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAswB4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "WeatherService.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\WeatherService.cs",
+              "RelativeDocumentMoniker": "Services\\WeatherService.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\WeatherService.cs",
+              "RelativeToolTip": "Services\\WeatherService.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAiwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:00:16.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:53:16.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 15,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "Shared\\NavMenu.razor",
+              "ViewState": "AgIAADwAAAAAAAAAAAAiwFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:54:17.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ThemeState.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\ThemeState.cs",
+              "RelativeDocumentMoniker": "Services\\ThemeState.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\ThemeState.cs",
+              "RelativeToolTip": "Services\\ThemeState.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:52:34.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "SupabaseSessionHandler.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseSessionHandler.cs",
               "RelativeDocumentMoniker": "Services\\SupabaseSessionHandler.cs",
               "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\SupabaseSessionHandler.cs",
               "RelativeToolTip": "Services\\SupabaseSessionHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:22:15.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T11:22:15.257Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 19,
+              "Title": "Dashboard.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Dashboard.razor",
+              "RelativeDocumentMoniker": "Pages\\Dashboard.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Dashboard.razor",
+              "RelativeToolTip": "Pages\\Dashboard.razor",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAswC0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:47:24.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FavoriteApiService.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\FavoriteApiService.cs",
+              "RelativeDocumentMoniker": "Services\\FavoriteApiService.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\FavoriteApiService.cs",
+              "RelativeToolTip": "Services\\FavoriteApiService.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAUwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T04:10:37.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
               "RelativeDocumentMoniker": "wwwroot\\appsettings.json",
               "ToolTip": "D:\\Web dev\\BlazorApp21\\wwwroot\\appsettings.json",
               "RelativeToolTip": "wwwroot\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-27T05:37:05.731Z",
+              "WhenOpened": "2026-05-27T05:37:05.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BlazorApp21.Api",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "RelativeToolTip": "..\\BlazorApp21.Api\\BlazorApp21.Api.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-01T11:45:47.203Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NavButtons.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavButtons.razor",
+              "RelativeDocumentMoniker": "Layout\\NavButtons.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavButtons.razor",
+              "RelativeToolTip": "Layout\\NavButtons.razor",
+              "ViewState": "AgIAABUAAAAAAAAAACBjwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:39:19.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Layout\\MainLayout.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Layout\\MainLayout.razor",
+              "ViewState": "AgIAAJAAAAAAAAAAACBjwMgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:16:02.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "Pages\\Weather.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Weather.razor",
+              "RelativeToolTip": "Pages\\Weather.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:46:53.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Favorites.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Favorites.razor",
+              "RelativeDocumentMoniker": "Pages\\Favorites.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Pages\\Favorites.razor",
+              "RelativeToolTip": "Pages\\Favorites.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:49:21.506Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 29,
+              "Title": "NavDrawerButtons.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavDrawerButtons.razor",
+              "RelativeDocumentMoniker": "Layout\\NavDrawerButtons.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavDrawerButtons.razor",
+              "RelativeToolTip": "Layout\\NavDrawerButtons.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAABRwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:40:27.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Layout\\NavMenu.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Layout\\NavMenu.razor",
+              "ViewState": "AgIAADAAAAAAAAAAACBjwCUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:40:47.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Components\\Routes.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Components\\Routes.razor",
+              "RelativeToolTip": "Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:38:09.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-26T10:15:29.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "WeatherResponse.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\WeatherResponse.cs",
+              "RelativeDocumentMoniker": "Models\\WeatherResponse.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\WeatherResponse.cs",
+              "RelativeToolTip": "Models\\WeatherResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:45:46.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "Models\\UserModel.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\UserModel.cs",
+              "RelativeToolTip": "Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAOI7jKLTnvwMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:44:22.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:43:14.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginModel.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\LoginModel.cs",
+              "RelativeToolTip": "Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:42:45.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ForecastResponse.cs",
+              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Models\\ForecastResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ForecastResponse.cs",
+              "ToolTip": "D:\\Web dev\\BlazorApp21\\Models\\ForecastResponse.cs",
+              "RelativeToolTip": "Models\\ForecastResponse.cs",
+              "ViewState": "AgIAAAAAAAAAjuM4DrTnvwUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T10:42:07.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "Signup.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Signup.razor",
               "RelativeDocumentMoniker": "Pages\\Signup.razor",
@@ -569,34 +634,31 @@
               "RelativeToolTip": "Pages\\Signup.razor",
               "ViewState": "AgIAAGYAAAAAAAAAAAAswIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:50:42.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:50:42.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "Program (1).cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Downloads\\Program (1).cs",
               "ToolTip": "C:\\Users\\Dell\\Downloads\\Program (1).cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAswBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:34:14.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T11:34:14.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "SupabaseService (3).cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Downloads\\SupabaseService (3).cs",
               "ToolTip": "C:\\Users\\Dell\\Downloads\\SupabaseService (3).cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAswFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:33:50.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T11:33:50.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService.cs",
@@ -604,77 +666,11 @@
               "RelativeToolTip": "Services\\AuthService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAswCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:17:15.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:17:15.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Shared\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Shared\\NavMenu.razor",
-              "RelativeToolTip": "Shared\\NavMenu.razor",
-              "ViewState": "AgIAABYAAAAAAAAAAAAvwCYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:54:17.822Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\WeatherForecast.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\WeatherForecast.cs",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:01:13.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\Program.cs",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\Program.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\Program.cs",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T11:00:55.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "..\\BlazorApp21.Api\\appsettings.json",
-              "ToolTip": "D:\\Web dev\\BlazorApp21.Api\\appsettings.json",
-              "RelativeToolTip": "..\\BlazorApp21.Api\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-26T11:00:43.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "ThemeState.cs",
-              "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Services\\ThemeState.cs",
-              "RelativeDocumentMoniker": "Services\\ThemeState.cs",
-              "ToolTip": "D:\\Web dev\\BlazorApp21\\Services\\ThemeState.cs",
-              "RelativeToolTip": "Services\\ThemeState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T10:52:34.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "Login.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Pages\\Login.razor",
@@ -682,12 +678,11 @@
               "RelativeToolTip": "Pages\\Login.razor",
               "ViewState": "AgIAAAAAAAAAOI7jKLTnvwEAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:50:07.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:50:07.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Pages\\Home.razor",
@@ -695,12 +690,11 @@
               "RelativeToolTip": "Pages\\Home.razor",
               "ViewState": "AgIAACwAAAAAAAAAAAAswEoAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-05-26T10:46:41.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:46:41.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
@@ -708,12 +702,11 @@
               "RelativeToolTip": "wwwroot\\index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-05-26T10:15:14.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T10:15:14.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 43,
               "Title": "icon-192.png -  [English (United States)] - PNG [192x192, 8 bit, PNG]",
               "DocumentMoniker": "D:\\Web dev\\BlazorApp21\\wwwroot\\icon-192.png",
               "RelativeDocumentMoniker": "wwwroot\\icon-192.png",
@@ -722,6 +715,24 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2026-05-26T10:33:39.678Z",
               "EditorCaption": " -  [English (United States)] - PNG [192x192, 8 bit, PNG]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 268,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }
