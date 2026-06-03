@@ -5,7 +5,7 @@ EXPOSE 10000
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet publish "BlazorApp21.Api/BlazorApp21.Api.csproj" -c Release -o /app/publish
+RUN dotnet publish "BlazorApp21.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
