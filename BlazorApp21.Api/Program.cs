@@ -7,8 +7,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var mongoConnectionString = builder.Configuration["MongoDbSettings__ConnectionString"] 
-    ?? throw new Exception("MongoDB connection string is missing!");
+var mongoConnectionString = builder.Configuration["MongoDbSettings__ConnectionString"]
+    ?? builder.Configuration["MongoDbSettings:ConnectionString"]
+    ?? "mongodb://localhost:27017";
 
 builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
 builder.Services.AddSingleton<MongoService>();
