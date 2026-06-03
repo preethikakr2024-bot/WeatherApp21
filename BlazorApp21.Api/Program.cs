@@ -1,18 +1,34 @@
+using BlazorApp21.Api.Services;
+using MongoDB.Driver;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var mongoConnectionString = builder.Configuration["MongoDbSettings__ConnectionString"];
+var mongoDatabaseName = builder.Configuration["MongoDbSettings__DatabaseName"];
+builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
+builder.Services.AddSingleton<MongoService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowBlazor", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+app.UseRouting();
+app.UseCors("AllowBlazor");
 app.UseAuthorization();
 app.MapControllers();
 
