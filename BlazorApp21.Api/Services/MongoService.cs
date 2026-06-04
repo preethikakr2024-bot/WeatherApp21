@@ -5,11 +5,14 @@ namespace BlazorApp21.Api.Services
     public class MongoService
     {
         private readonly IMongoCollection<UserFavorite> _favorites;
-        public MongoService(IMongoClient client)
-        {
-            var database = client.GetDatabase("BlazorApp21");
-            _favorites = database.GetCollection<UserFavorite>("Favorites");
-        }
+        public MongoService(IMongoClient client, IConfiguration config)
+{
+    var dbName = config["MongoDbSettings__DatabaseName"] 
+        ?? config["MongoDbSettings:DatabaseName"] 
+        ?? "WeatherDB";
+    var database = client.GetDatabase(dbName);
+    _favorites = database.GetCollection<UserFavorite>("Favorites");
+}
         public async Task SaveFavorite(UserFavorite fav)
 {
     var existing = await _favorites
